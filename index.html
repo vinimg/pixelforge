@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PixelForge Studio</title>
+  <!-- Bootstrap CSS -->
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+  <style>
+    /* CSS-only navigation */
+    main > section { display: none; }
+    #home-radio:checked ~ main > #home,
+    #about-radio:checked ~ main > #about,
+    #services-radio:checked ~ main > #services,
+    #contact-radio:checked ~ main > #contact { display: block; }
+    .nav-link { cursor: pointer; }
+    /* Active nav-link styling */
+    #home-radio:checked ~ nav .nav-link[for="home-radio"],
+    #about-radio:checked ~ nav .nav-link[for="about-radio"],
+    #services-radio:checked ~ nav .nav-link[for="services-radio"],
+    #contact-radio:checked ~ nav .nav-link[for="contact-radio"] {
+      background-color: rgba(255,255,255,.15);
+      border-radius: .25rem;
+    }
+    .info-bar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #343a40;
+      color: #fff;
+      text-align: center;
+      padding: .5rem 0;
+      font-size: .9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hidden radio inputs for section toggling -->
+  <input type="radio" id="home-radio" name="page" checked hidden>
+  <input type="radio" id="about-radio" name="page" hidden>
+  <input type="radio" id="services-radio" name="page" hidden>
+  <input type="radio" id="contact-radio" name="page" hidden>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">PixelForge Studio</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><label class="nav-link" for="home-radio">Home</label></li>
+          <li class="nav-item"><label class="nav-link" for="about-radio">Sobre</label></li>
+          <li class="nav-item"><label class="nav-link" for="services-radio">Serviços</label></li>
+          <li class="nav-item"><label class="nav-link" for="contact-radio">Contato</label></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="py-5 bg-light text-center">
+      <div class="container">
+        <h1 class="display-4 mb-3">Bem-vindo ao PixelForge Studio</h1>
+        <p class="lead mb-4">Forjamos ideias em produtos digitais inovadores.</p>
+
+        <!-- Feature Highlights -->
+        <div class="row g-4 mb-5">
+          <div class="col-md-4">
+            <div class="card border-primary shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">Inovação</h5>
+                <p class="card-text">Criatividade e tecnologia de ponta em cada projeto.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-success shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">Eficiência</h5>
+                <p class="card-text">Processos otimizados garantem entregas ágeis.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-warning shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">Suporte 24/7</h5>
+                <p class="card-text">Equipe dedicada para manter seu negócio em atividade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="row text-center mb-5">
+          <div class="col-md-4"><h2><span class="badge bg-primary">120+</span></h2><p>Projetos Concluídos</p></div>
+          <div class="col-md-4"><h2><span class="badge bg-success">85%</span></h2><p>Clientes Satisfeitos</p></div>
+          <div class="col-md-4"><h2><span class="badge bg-warning">5000+</span></h2><p>Cafés Tomados</p></div>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <h5 class="mb-3">Assine nossa Newsletter</h5>
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Seu e-mail" aria-label="Email">
+              <button class="btn btn-dark" type="button">Inscrever</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="mb-4">Nossa Jornada</h2>
+        <ul class="list-group mb-5">
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto"><div class="fw-bold">2010</div>Fundação da PixelForge Studio com foco em web design.</div>
+            <span class="badge bg-primary rounded-pill">Início</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto"><div class="fw-bold">2013</div>Lançamento de nossa primeira app móvel.</div>
+            <span class="badge bg-success rounded-pill">Mobile</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto"><div class="fw-bold">2017</div>Expansão para serviços de Cloud & DevOps.</div>
+            <span class="badge bg-warning rounded-pill">Cloud</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto"><div class="fw-bold">2022</div>Mais de 100 projetos entregues globalmente.</div>
+            <span class="badge bg-dark rounded-pill">Marco</span>
+          </li>
+        </ul>
+        <h3 class="mb-4">Equipe</h3>
+        <div class="row gy-4 mb-5">
+          <div class="col-md-4 text-center"><img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Ana Silva"><h5>Ana Silva</h5><p class="text-muted">CEO & Co-Fundadora</p></div>
+          <div class="col-md-4 text-center"><img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Bruno Costa"><h5>Bruno Costa</h5><p class="text-muted">CTO & Arquiteto de Software</p></div>
+          <div class="col-md-4 text-center"><img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Carla Pereira"><h5>Carla Pereira</h5><p class="text-muted">Head de UX/UI</p></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6"><h5>Missão</h5><blockquote class="blockquote">Capacitar empresas com soluções digitais de alta qualidade.</blockquote></div>
+          <div class="col-md-6"><h5>Visão</h5><blockquote class="blockquote">Ser referência em inovação na América Latina.</blockquote></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-4">O que Fazemos</h2>
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="card shadow-sm h-100">
+              <img src="assets/imagem1.png" class="card-img-top" alt="Desenvolvimento Web">
+              <div class="card-body"><h5 class="card-title">Desenvolvimento Web</h5><p class="card-text">Portais, e-commerce e PWA com performance otimizada.</p></div>
+              <ul class="list-group list-group-flush"><li class="list-group-item">React, Vue, Angular</li><li class="list-group-item">GraphQL e REST</li></ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card shadow-sm h-100">
+              <img src="assets/imagem2.png" class="card-img-top" alt="Apps Mobile">
+              <div class="card-body"><h5 class="card-title">Apps Mobile</h5><p class="card-text">Flutter e React Native para Android/iOS.</p></div>
+              <ul class="list-group list-group-flush"><li class="list-group-item">UX otimizada</li><li class="list-group-item">Integração nativa</li></ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card shadow-sm h-100">
+              <img src="assets/imagem3.png" class="card-img-top" alt="Cloud & DevOps">
+              <div class="card-body"><h5 class="card-title">Cloud & DevOps</h5><p class="card-text">CI/CD, Docker, Kubernetes e infraestrutura escalável.</p></div>
+              <ul class="list-group list-group-flush"><li class="list-group-item">AWS, Azure, GCP</li><li class="list-group-item">Monitoramento 24/7</li></ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card shadow-sm h-100">
+              <img src="assets/imagem4.png" class="card-img-top" alt="Consultoria">
+              <div class="card-body"><h5 class="card-title">Consultoria</h5><p class="card-text">Auditoria técnica e workshops personalizados.</p></div>
+              <ul class="list-group list-group-flush"><li class="list-group-item">Best practices</li><li class="list-group-item">Mentoria técnica</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="mb-4">Contato</h2>
+        <div class="row mb-4">
+          <div class="col-md-5">
+            <h5>Nosso Escritório</h5>
+            <p>Av. Central, 1000<br>Porto Alegre, RS</p>
+            <p>Email: <a href="mailto:contato@pixelforge.com">contato@pixelforge.com</a><br>Tel: (51) 4000-1234</p>
+          </div>
+          <div class="col-md-7">
+            <form class="row g-3" novalidate>
+              <div class="col-md-6"><label for="name" class="form-label">Nome</label><input type="text" id="name" class="form-control" required></div>
+              <div class="col-md-6"><label for="email" class="form-label">Email</label><input type="email" id="email" class="form-control" required></div>
+              <div class="col-12"><label for="msg" class="form-label">Mensagem</label><textarea id="msg" rows="4" class="form-control" required></textarea></div>
+              <div class="col-12"><button type="submit" class="btn btn-success">Enviar Mensagem</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Info Bar -->
+  <div class="info-bar">
+    PixelForge Studio © 2025 • Todos os direitos reservados • Siga-nos: Twitter | LinkedIn | GitHub
+  </div>
+</body>
+</html>
